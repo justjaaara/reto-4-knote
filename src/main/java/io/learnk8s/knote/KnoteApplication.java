@@ -34,10 +34,10 @@ import java.util.List;
 import java.util.UUID;
 
 @SpringBootApplication
-public class KnoteJavaApplication {
+public class KnoteApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KnoteJavaApplication.class, args);
+        SpringApplication.run(KnoteApplication.class, args);
     }
 
 }
