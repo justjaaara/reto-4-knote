@@ -22,6 +22,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -65,8 +66,8 @@ class Note {
     }
 }
 
-@Configuration
 @ConfigurationProperties(prefix = "knote")
+@Component
 class KnoteProperties {
     @Value("${minio.host:localhost}")
     private String minioHost;
@@ -109,7 +110,6 @@ class KnoteProperties {
     public boolean isMinioReconnectEnabled() {
         return minioReconnectEnabled;
     }
-
 }
 
 @Controller
