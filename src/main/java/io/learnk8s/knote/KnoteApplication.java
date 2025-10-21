@@ -65,7 +65,7 @@ class Note {
     }
 }
 
-
+@Configuration
 @ConfigurationProperties(prefix = "knote")
 class KnoteProperties {
     @Value("${minio.host:localhost}")
